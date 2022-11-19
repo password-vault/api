@@ -1,0 +1,13 @@
+version: '3.7'
+
+networks:
+  base:
+
+services:
+  mongo:
+    container_name: mongo_my-password
+    image: mongo
+    volumes:
+      - postgres:/var/lib/mongodb/data
+    ports:
+      - '27017:27017'
